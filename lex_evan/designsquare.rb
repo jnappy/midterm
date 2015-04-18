@@ -106,7 +106,8 @@ until user_action == "e"
     puts "What is this user's current job title?"
     user.title = gets.strip
 
-    puts "How many years of job experience does this user have?"
+    puts "How many years of job experience does this user have? (Please enter a number)"
+    user.experience = gets.strip.to_i
 
     puts "Does the user have a behance account from which to import projects?  (Y) or (N)?"
     has_behance = gets.strip.downcase
