@@ -1,0 +1,76 @@
+<style type="text/css">
+body {
+	background-color:cornflowerblue;
+}
+	main {
+		background-color:aliceblue;
+		border:2px solid #333;
+		border-radius:3px;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		color:darkslateblue;
+		font-family:'Helvetica', sans-serif;
+		font-size:1.6em;
+		margin:1.6em auto;
+		max-width:1000px;
+		padding:1.6em;
+	}
+	.madlib {
+		font-size:1.3em;
+		font-weight:bold;
+	}
+	img {
+		background-color:#999;
+		border:2px solid #333;
+		border-radius:3px;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		display:inline-block;
+		margin-top:1.6em;
+		max-width:100%;
+		padding:.4em;
+	}
+</style>
+
+<main>
+
+	<h1>A Story about <%= "#{@user.name}" %> and <%= "#{@bff.name}" %></h1>
+
+	<p>
+		Meet our hero, <span class="madlib"><%= "#{@user.name}" %></span>.<br />
+		<img src="<%= "#{@user_giphy}" %>" alt="<%= "#{@user.name}" %>" />
+	</p>
+
+	<p>
+		One day, <span class="madlib"><%= "#{@user.name}" %></span> was walking along, feeling pretty <span class="madlib"><%= "#{@mood}" %></span>.
+		<img src="<%= "#{@mood_giphy}" %>" alt="<%= "#{@mood}" %>" />
+	</p>
+
+	<p>
+		Suddenly, <span class="madlib"><%= "#{@user.name}" %></span> saw <span class="madlib"><%= "#{@user.pronoun_pos}" %></span> bff <span class="madlib"><%= "#{@bff.name}" %></span> come strolling around the bend.
+		<img src="<%= "#{@bff_giphy}" %>" alt="<%= "#{@bff.name}" %>" />
+	</p>
+
+	<p>
+		<span class="madlib"><%= "#{@bff.pronoun_subj.capitalize}" %></span>'s just your average <span class="madlib"><%= "#{@bff.species}" %></span>.
+		<img src="<%= "#{@bff_species_giphy}" %>" alt="<%= "#{@bff.species}" %>" />
+	</p>
+
+	<p>
+		Of course, the bff's were happy to see each other...
+		<img src="<%= "#{@happy_giphy}" %>" alt="Happy" />
+	</p>
+
+	<p>
+		...and they strolled off into the sunset.
+		<img src="<%= "#{@sunset_giphy}" %>" alt="Sunset" />
+	</p>
+
+	<p>
+		They both pretended not to notice all the cat butts.
+		<img src="<%= "#{@cat_butt_giphy}" %>" alt="Cat butt" />
+	</p>
+
+</main>
